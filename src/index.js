@@ -46,6 +46,7 @@ const onVisibilityChange = (el, offset, callback) => {
  */
 export class AnimatedOnScroll extends React.Component {
   content = null;
+  handler;
 
   constructor(props) {
     super(props);
@@ -57,9 +58,9 @@ export class AnimatedOnScroll extends React.Component {
   componentDidMount() {
     if (isBrowser && this.content) {
       const {screenOffset} = this.props;
-      const handler = throttle(onVisibilityChange(this.content, screenOffset, this.onVisibilityChange), 200);
-      ['DOMContentLoaded', 'load', 'resize', 'scroll'].forEach(e => window.addEventListener(e, handler, false));
-      handler();
+      this.handler = throttle(onVisibilityChange(this.content, screenOffset, this.onVisibilityChange), 200);
+      ['DOMContentLoaded', 'load', 'resize', 'scroll'].forEach(e => window.addEventListener(e, this.handler, false));
+      this.handler();
     }
   };
 
@@ -72,6 +73,12 @@ export class AnimatedOnScroll extends React.Component {
       return;
     }
     this.setState({isVisible: isVisibleNext})
+  }
+
+  componentWillUnmount() {
+    if (isBrowser && this.handler) {
+      ['DOMContentLoaded', 'load', 'resize', 'scroll'].forEach(e => window.removeEventListener(e, this.handler, false));
+    }
   }
 
   render() {
