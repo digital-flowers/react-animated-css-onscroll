@@ -1,5 +1,4 @@
 import React from "react";
-import autobind from "autobind-decorator";
 import throttle from "lodash.throttle";
 import {isBrowser} from "browser-or-node";
 import {Animated} from "react-animated-css";
@@ -64,8 +63,13 @@ export class AnimatedOnScroll extends React.Component {
     }
   };
 
-  @autobind
-  onVisibilityChange(isVisibleNext) {
+  componentWillUnmount() {
+    if (isBrowser && this.handler) {
+      ['DOMContentLoaded', 'load', 'resize', 'scroll'].forEach(e => window.removeEventListener(e, this.handler, false));
+    }
+  }
+
+  onVisibilityChange = isVisibleNext => {
     const {animationOut} = this.props;
     const {isVisible} = this.state;
     // if no animation out make the animation once :)
@@ -73,13 +77,7 @@ export class AnimatedOnScroll extends React.Component {
       return;
     }
     this.setState({isVisible: isVisibleNext})
-  }
-
-  componentWillUnmount() {
-    if (isBrowser && this.handler) {
-      ['DOMContentLoaded', 'load', 'resize', 'scroll'].forEach(e => window.removeEventListener(e, this.handler, false));
-    }
-  }
+  };
 
   render() {
     const {children, ...rest} = this.props;
@@ -101,6 +99,8 @@ AnimatedOnScroll.propTypes = {
   animationOut: string,
   animationInDelay: number,
   animationOutDelay: number,
+  animationInDuration: number,
+  animationOutDuration: number,
   style: object,
   innerRef: func,
   className: string,
@@ -114,6 +114,8 @@ AnimatedOnScroll.defaultProps = {
   className: "",
   animationInDelay: 0,
   animationOutDelay: 0,
+  animationInDuration: 1000,
+  animationOutDuration: 1000,
   animateOnMount: true,
   screenOffset: 50,
   style: {}

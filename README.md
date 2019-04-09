@@ -39,6 +39,8 @@ import {AnimatedOnScroll} from "react-animated-css-onscroll";
 - **animationOut** animation out name, default "fadeOut"
 - **animationInDelay** animation in delay, default 0
 - **animationOutDelay** animation out delay, default 0
+- **animationInDuration** animation in duration, default 1000
+- **animationOutDuration** animation out duration, default 1000
 - **style** react style property for the inner component
 - **innerRef** react ref property for the inner component
 - **className** react className property for the inner component

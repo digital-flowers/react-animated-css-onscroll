@@ -77,10 +77,6 @@ asynckit@^0.4.0:
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/asynckit/-/asynckit-0.4.0.tgz#c79ed97f7f34cb8f2ba1bc9790bcc366474b4b79"
 
-autobind-decorator@^2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/autobind-decorator/-/autobind-decorator-2.1.0.tgz#4451240dbfeff46361c506575a63ed40f0e5bc68"
-
 aws-sign2@~0.6.0:
   version "0.6.0"
   resolved "https://registry.yarnpkg.com/aws-sign2/-/aws-sign2-0.6.0.tgz#14342dd38dbcc94d0e5b87d763cd63612c0e794f"
@@ -1378,6 +1374,10 @@ lodash.throttle@^4.1.1:
   version "4.1.1"
   resolved "https://registry.yarnpkg.com/lodash.throttle/-/lodash.throttle-4.1.1.tgz#c23e91b710242ac70c37f1e1cda9274cc39bf2f4"
 
+lodash@^4.16.6:
+  version "4.17.11"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.11.tgz#b39ea6229ef607ecd89e2c8df12536891cac9b8d"
+
 lodash@^4.17.4:
   version "4.17.5"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.5.tgz#99a92d65c0272debe8c96b6057bc8fbfa3bed511"
@@ -1604,15 +1604,22 @@ rc@^1.1.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
-react-animated-css@^1.0.4:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/react-animated-css/-/react-animated-css-1.0.4.tgz#72ee6f15de725ee40da779f8fd6225ff6a71c713"
+react-animated-css@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/react-animated-css/-/react-animated-css-1.0.5.tgz#f94c58a5d6440d72dc111d8494a6eefe74a8e4e4"
   dependencies:
     babel-polyfill "^6.23.0"
     browser-or-node "^1.0.2"
     classnames "^2.2.5"
     prop-types "^15.5.10"
     react "^15.6.1"
+    react-prefixer "^2.0.1"
+
+react-prefixer@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/react-prefixer/-/react-prefixer-2.0.1.tgz#d3d77a12ba276a89ce4cfce4cca08f6453215837"
+  dependencies:
+    lodash "^4.16.6"
 
 react@^15.6.1:
   version "15.6.2"

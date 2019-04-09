@@ -1,6 +1,6 @@
 {
   "name": "react-animated-css-onscroll",
-  "version": "1.0.2",
+  "version": "1.0.5",
   "description": "React component to show or hide elements with animations when they are visible to the screen using [Animated.css](https://daneden.github.io/animate.css/)",
   "main": "./lib/index.js",
   "scripts": {
@@ -31,12 +31,11 @@
     "babel-preset-stage-0": "^6.24.1"
   },
   "dependencies": {
-    "autobind-decorator": "^2.1.0",
     "babel-polyfill": "^6.23.0",
     "browser-or-node": "^1.0.2",
     "lodash.throttle": "^4.1.1",
     "prop-types": "^15.5.10",
     "react": "^15.6.1",
-    "react-animated-css": "^1.0.4"
+    "react-animated-css": "^1.0.5"
   }
 }
