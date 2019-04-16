@@ -105,7 +105,7 @@ AnimatedOnScroll.propTypes = {
   innerRef: func,
   className: string,
   animateOnMount: bool,
-  screenOffset: string
+  screenOffset: number
 };
 
 AnimatedOnScroll.defaultProps = {
