@@ -1630,10 +1630,10 @@ rc@^1.1.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
-react-animated-css@^1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/react-animated-css/-/react-animated-css-1.2.0.tgz#adf6809c37e52bad7bee82f5314c746f21bdead6"
-  integrity sha512-lAbjuxI8CW0eqQIWV4UeqXK4i6j2BycfSt/f87sQCQidunpVYlO70ZmDOX3aTaT5AzcY28gPVFY6Qg5Q8KpuIw==
+react-animated-css@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/react-animated-css/-/react-animated-css-1.2.1.tgz#6289bec9d560254791a7f5c4fa0f99e01ef0a3a2"
+  integrity sha512-/6jtyCdTRw658CQTcMPwxN0ueLBlkqno7eKOLIyeNwn+rpq/smei4AwJooXW0i+Db+9YiP8QbkJ6pEwZDRAxxQ==
   dependencies:
     babel-polyfill "^6.23.0"
     browser-or-node "^1.0.2"
